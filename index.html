@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNHJ ⌂ Craft furniture, modern designs • masterfully made - DNHJ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" sizes="any" href="favicon.ico">
+
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "inter", sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #111;
+        }
+
+        header {
+            background: #fff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        img {
+            width: 70px;
+            padding: 3px;
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            gap: 25x;
+            font-weight: 500;
+        }
+
+        span {
+            display: flex;
+            padding: 5px;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .search-bar {
+            flex: 0.9;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            background: #f2f2f2;
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            font-size: 18px;
+        }
+
+        .icons:hover {
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            gap: 20px;
+            padding: 20px 40px;
+            background: #ffffff;
+            overflow-x: auto;
+        }
+
+        .category {
+            min-width: 120px;
+            background: #f2f2f2;
+            padding: 15px;
+            border-radius: 2px;
+            text-align: center;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .category:hover {
+            border: 1px solid;
+        }
+
+        .hero {
+            background: #ffffff;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+            padding: 30px 40px;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .card-text {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .chat-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ffcc00;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cate-gories {
+            padding: 40px;
+        }
+
+        .categories h2 {
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .category-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+        }
+
+        .card-to {
+            position: relative;
+            min-width: 200px;
+            cursor: pointer;
+        }
+
+        .card-to img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .card-to p {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #0077c8;
+            color: white;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 3px;
+        }
+
+        .banner-col {
+            background: #fff;
+            padding: 10px;
+        }
+
+        .banner {
+            background: #cfae8d;
+            padding: 70px 90px;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .banner:hover {
+            cursor: pointer;
+        }
+
+        .banner h1:hover {
+            text-decoration: underline;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 20px;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+
+        .arrow-btn {
+            margin-top: 30px;
+            width: 45px;
+            height: 45px;
+            border: 1px solid black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .footer {
+            background: #f5f5f5;
+            padding: 60px 80px;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .footer-col ul li:hover {
+            text-decoration: underline;
+        }
+
+        .footer-btn {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .mt {
+            margin-top: 30px;
+        }
+
+        .footer-bottom {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            /* HEADER */
+
+            header {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 10px 15px;
+            }
+
+            /* LOGO */
+
+            .logo {
+                order: 1;
+                width: 50%;
+            }
+
+            /* ICONS */
+
+            .icons {
+                order: 2;
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+                gap: 15px;
+            }
+
+            /* SEARCH BAR */
+
+            .search-bar {
+                order: 4;
+                width: 100%;
+                margin-top: 12px;
+            }
+
+            .search-bar input {
+                width: 410px;
+                padding: 10px;
+            }
+
+            /* MENU */
+
+            nav {
+                order: 3;
+                width: 100%;
+                display: none;
+                flex-direction: row;
+                background: #fff;
+            }
+
+            nav a {
+                padding: 1px 3px;
+            }
+
+            /* MENU TOGGLE */
+
+            nav.show-menu {
+                display: flex;
+            }
+
+            /* CATEGORY SECTION */
+
+            .categories {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .category {
+                width: 100%;
+                height: auto;
+            }
+
+            /* HERO SECTION */
+
+            .hero {
+                flex-direction: column;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .hero .card img {
+                width: 100%;
+                border-radius: 8px;
+            }
+
+            /* OFFER CARDS */
+
+            .category-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card-to img {
+                width: 100%;
+            }
+
+            /* BANNER */
+
+            .banner {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .banner h1 {
+                font-size: 22px;
+            }
+
+            .banner p {
+                font-size: 14px;
+            }
+
+            /* FOOTER */
+
+            .footer-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                padding: 0 15px;
+            }
+
+            .footer-col {
+                border-bottom: 1px solid #ddd;
+                padding: 15px 0;
+            }
+
+            /* Hide list initially */
+
+            .footer-col ul {
+                display: none;
+                padding-top: 10px;
+            }
+
+            /* Footer title */
+
+            .footer-col h4 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            /* Arrow */
+
+            .footer-col h4::after {
+                content: "▼";
+                font-size: 12px;
+            }
+
+            /* Active */
+
+            .footer-col.active ul {
+                display: block;
+            }
+
+            .footer-col.active h4::after {
+                transform: rotate(180deg);
+            }
+
+            /* Footer bottom */
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                margin-top: 20px;
+            }
+
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* ============================= */
+        /* EXTRA SMALL DEVICES */
+        /* ============================= */
+        @media (max-width: 480px) {
+            .categories {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .banner h1 {
+                font-size: 20px;
+            }
+
+            .search-bar input {
+                font-size: 14px;
+            }
+
+            .hero .card img {
+                height: auto;
+            }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./DNHJ_CRAFT_favicon.png" alt="">
+        </div>
+        <nav>
+            <a href="#"><span>Products</span></a>
+            <a href="#"><span>Rooms</span></a>
+            <a href="#"><span>Offers</span></a>
+            <a href="#"><span>Inspiration</span></a>
+            <a href="#"><span>Design/Support</span></a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="What are you looking for?">
+        </div>
+        <div class="icons">
+            <span>
+                <svg viewBox="0 0 24 24" focusable="false" width="24" height="24" data-skapa="ssr-icon@11.3.1"
+                    aria-hidden="true" class="hnf-person__icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.6724 6.4678c.2734-.2812.6804-.4707 1.3493-.4707.3971 0 .705.0838.9529.2225.241.1348.4379.3311.5934.6193l.0033.006c.1394.2541.237.6185.237 1.1403 0 .7856-.2046 1.2451-.4796 1.5278l-.0048.005c-.2759.2876-.679.4764-1.334.4764-.3857 0-.6962-.082-.956-.2241-.2388-.1344-.4342-.3293-.5888-.6147-.1454-.275-.2419-.652-.2419-1.1704 0-.7902.2035-1.2442.4692-1.5174zm1.3493-2.4717c-1.0834 0-2.054.3262-2.7838 1.0766-.7376.7583-1.0358 1.781-1.0358 2.9125 0 .7656.1431 1.483.4773 2.112l.0031.0058c.3249.602.785 1.084 1.3777 1.4154l.0062.0035c.5874.323 1.2368.4736 1.9235.4736 1.0818 0 2.0484-.3333 2.7755-1.0896.7406-.7627 1.044-1.786 1.044-2.9207 0-.7629-.1421-1.4784-.482-2.0996-.3247-.6006-.7844-1.0815-1.376-1.4125-.5858-.3276-1.2388-.477-1.9297-.477zM6.4691 16.8582c.2983-.5803.7228-1.0273 1.29-1.3572.5582-.3191 1.2834-.5049 2.2209-.5049h4.04c.9375 0 1.6626.1858 2.2209.5049.5672.3299.9917.7769 1.29 1.3572.3031.5896.4691 1.2936.4691 2.1379v1h2v-1c0-1.1122-.2205-2.1384-.6904-3.0523a5.3218 5.3218 0 0 0-2.0722-2.1769c-.9279-.5315-2.0157-.7708-3.2174-.7708H9.98c-1.1145 0-2.2483.212-3.2225.7737-.8982.5215-1.5928 1.2515-2.0671 2.174C4.2205 16.8577 4 17.8839 4 18.9961v1h2v-1c0-.8443.166-1.5483.4691-2.1379z">
+                    </path>
+                </svg>
+            </span>
+
+            <span>
+                <svg viewBox="0 0 24 24" focusable="false" width="24" height="24" data-skapa="ssr-icon@11.3.1"
+                    aria-hidden="true" class="hnf-svg-icon--heart">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.205 5.599c.9541.954 1.4145 2.2788 1.4191 3.6137 0 3.0657-2.2028 5.7259-4.1367 7.5015-1.2156 1.1161-2.5544 2.1393-3.9813 2.9729L12 20.001l-.501-.3088c-.9745-.5626-1.8878-1.2273-2.7655-1.9296-1.1393-.9117-2.4592-2.1279-3.5017-3.5531-1.0375-1.4183-1.8594-3.1249-1.8597-4.9957-.0025-1.2512.3936-2.5894 1.419-3.6149 1.8976-1.8975 4.974-1.8975 6.8716 0l.3347.3347.336-.3347c1.8728-1.8722 4.9989-1.8727 6.8716 0zm-7.2069 12.0516c.6695-.43 1.9102-1.2835 3.1366-2.4096 1.8786-1.7247 3.4884-3.8702 3.4894-6.0264-.0037-.849-.2644-1.6326-.8333-2.2015-1.1036-1.1035-2.9413-1.0999-4.0445.0014l-1.7517 1.7448-1.7461-1.7462c-1.1165-1.1164-2.9267-1.1164-4.0431 0-1.6837 1.6837-.5313 4.4136.6406 6.0156.8996 1.2298 2.0728 2.3207 3.137 3.1722a24.3826 24.3826 0 0 0 2.0151 1.4497z">
+                    </path>
+                </svg>
+            </span>
+
+            <span>
+                <svg viewBox="0 0 24 24" focusable="false" width="24" height="24" data-skapa="ssr-icon@11.3.1"
+                    aria-hidden="true" class="hnf-btn__icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11.9997 4c1.7048 0 2.9806 1.122 3.4578 2.7127.3246 1.0819.5718 2.1886.8335 3.2873h6.1517l-3.75 10H5.3067l-3.75-10h6.1516c.2617-1.0987.509-2.2054.8335-3.2873C9.019 5.122 10.2948 4 11.9997 4zm2.2348 6H9.7648c.2293-.9532.5299-2.1701.6927-2.7127C10.6838 6.533 11.1739 6 11.9997 6s1.3158.533 1.5421 1.2873c.1628.5426.4634 1.7595.6927 2.7127zm-9.7918 2 2.25 6h10.614l2.25-6h-3.3252c-.6633 2.1065-1.7665 4-4.2318 4-2.4654 0-3.5686-1.8935-4.2319-4h-3.325zm5.4308 0c.3635 1.0612.8841 2 2.1262 2 1.242 0 1.7626-.9388 2.1261-2H9.8735z">
+                    </path>
+                </svg>
+            </span>
+
+            <span>
+                <svg viewBox="0 0 24 24" focusable="false" width="24" height="24" data-skapa="ssr-icon@11.3.1"
+                    aria-hidden="true" class="hnf-btn__icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 8H4V6h16v2zm0 5H4v-2h16v2zm0 5H4v-2h16v2z">
+                    </path>
+                </svg>
+            </span>
+        </div>
+    </header>
+
+    <section class="categories">
+        <img src="./storage-furniture-st001-removebg-preview.png"
+            class="category" alt="storage">
+        <img src="./kitchen-appliances-ka001-removebg-preview.png"
+            class="category" alt="Laundry & Cleaning">
+        <img src="./bathroom-products-ba001-removebg-preview.png"
+            class="category" alt="Pots & Plants">
+        <img src="./tables-chairs-fu002-removebg-preview.png" class="category"
+            alt="Food & Beverages">
+        <img src="./beds-mattresses-bm001-removebg-preview.png" class="category"
+            alt="Home Improvement">
+        <img src="./desk-desk-chairs-fu004-removebg-preview.png"
+            class="category" alt="Smart Home">
+        <img src="./outdoor-products-od001-removebg-preview.png"
+            class="category" alt="Home Electronics">
+        <img src="./sofas-armchairs-700640-removebg-preview.png"
+            class="category" alt="Pet Products">
+        <img src="./small-storage-organisers-st007-removebg-preview.png"
+            class="category" alt="">
+        <img src="./lighting-li001-removebg-preview.png" class="category"
+            alt="">
+        <img src="./decoration-de001-removebg-preview.png" class="category"
+            alt="">
+        <img src="./pots-plants-pp001-removebg-preview.png" class="category"
+            alt="">
+        <img src="./curtains-blinds-tl002-removebg-preview.png" class="category"
+            alt="">
+    </section>
+
+    <section class="hero">
+        <div class="card">
+            <img src="./Storage.jpg" alt="Storage">
+        </div>
+        <div class="card">
+            <img src="./Boxes.webp" alt="Boxes">
+            <div class="card-text">Small storage boxes and baskets starting Rs. 299 →</div>
+        </div>
+        <div class="card">
+            <img src="./Wardrobe.jpg" alt="Wardrobe">
+        </div>
+    </section>
+
+    <button class="chat-btn" onclick="openChat()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M20 3H4H2V5V15V17H4H7V22L14 17L20 17H22V15V5V3H20ZM7 15L9 15V17V18L13 15H14L20 15V5H4L4 15H7Z"
+                fill="#000000">
+            </path>
+        </svg>
+    </button>
+
+    <section class="cate-gories">
+        <h2>Explore more categories on offer</h2>
+        <p class="subtitle">Textiles categories</p>
+
+        <div class="category-container">
+
+            <div class="card-to">
+                <span class="tag">DNHJ Family price</span>
+                <img src="./food & beverages.avif">
+                <p>Flat 20% off on beverages →</p>
+            </div>
+
+            <div class="card-to">
+                <span class="tag">DNHJ Family price</span>
+                <img src="./home improvement.jpg">
+                <p>Flat 20% off on home improvement →</p>
+            </div>
+
+            <div class="card-to">
+                <span class="tag">DNHJ Family price</span>
+                <img src="./laundry.jpg">
+                <p>Flat 20% off on laundry →</p>
+            </div>
+
+            <div class="card-to">
+                <span class="tag">DNHJ Family price</span>
+                <img src="./smart home.jpg">
+                <p>Flat 20% off on smart home →</p>
+            </div>
+
+            <div class="card-to">
+                <span class="tag">DNHJ Family price</span>
+                <img src="./children's textiles.jpg">
+                <p>Flat 20% off on children's textiles →</p>
+            </div>
+
+            <div class="card-to">
+                <span class="tag">DNHJ Family price</span>
+                <img src="./Chairpads.jpg">
+                <p>Flat 20% off on chairpads →</p>
+            </div>
+
+            <div class="card-to">
+                <span class="tag">DNHJ Family price</span>
+                <img src="./towel rails & holders.jpg">
+                <p>Flat 20% off on towel rails & holders →</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="banner-col">
+        <div class="banner">
+            <h1>Boost your Business</h1>
+            <p>
+                Shop now & get up to 10% off. Valid for DNHJ Business customer members
+                till 31 Mar 2026. T&C apply.*
+            </p>
+
+            <div class="arrow-btn">
+                →
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col">
+                <h3>Join DNHJ Family</h3>
+                <p>
+                    Enjoy member-only discounts & offers, early access to sale and much more.
+                </p>
+                <button class="footer-btn">Join the club</button>
+
+                <h3 class="mt">DNHJ Business Network</h3>
+                <p>
+                    Join the membership program for business customers with exciting benefits.
+                </p>
+                <button class="footer-btn">Join now</button>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>DNHJ Family</h4>
+                <ul>
+                    <li>Log in</li>
+                    <li>Join DNHJ Family</li>
+                    <li>Member offers</li>
+                    <li>Workshops & Events</li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li>Delivery Service</li>
+                    <li>Click & Collect</li>
+                    <li>Personal Shopper</li>
+                    <li>Online Planning Tool</li>
+                    <li>Assembly Service</li>
+                    <li>Kitchen Planning</li>
+                    <li>Installation Service</li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li>How to shop</li>
+                    <li>Return policy</li>
+                    <li>Contact us</li>
+                    <li>FAQ's</li>
+                    <li>Terms and conditions</li>
+                </ul>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="footer-col">
+                <h4>About DNHJ</h4>
+                <ul>
+                    <li>This is DNHJ</li>
+                    <li>Careers at DNHJ</li>
+                    <li>Sustainability</li>
+                    <li>DNHJ Stores</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>© Inter DNHJ Systems B.V. 2026</p>
+
+            <div class="footer-links">
+                <a href="#">Privacy policy</a>
+                <a href="#">Cookie policy</a>
+                <a href="#">Cookie settings</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        // ===============================
+        // MOBILE MENU TOGGLE
+        // ===============================
+
+        const menuIcon = document.querySelector(".icons span:last-child");
+        const nav = document.querySelector("nav");
+
+        menuIcon.addEventListener("click", () => {
+            nav.classList.toggle("show-menu");
+        });
+
+
+        // ===============================
+        // SEARCH BAR FUNCTION
+        // ===============================
+
+        const searchInput = document.querySelector(".search-bar input");
+
+        searchInput.addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                const value = searchInput.value.trim();
+
+                if (value === "") {
+                    alert("Please type something to search.");
+                } else {
+                    alert("Searching for: " + value);
+                }
+            }
+        });
+
+        // ===============================
+        // CHAT BUTTON FUNCTION
+        // ===============================
+
+        function openChat() {
+            let chatBox = document.querySelector(".chat-box");
+
+            if (!chatBox) {
+                chatBox = document.createElement("div");
+                chatBox.classList.add("chat-box");
+
+                chatBox.innerHTML = `
+        <div class="chat-header">
+            DNHJ Support
+            <span class="close-chat">✖</span>
+        </div>
+
+        <div class="chat-body">
+            <p>Hello 👋</p>
+            <p>How can we help you today?</p>
+        </div>
+
+        <input type="text" placeholder="Type a message..." class="chat-input">
+        `;
+
+                document.body.appendChild(chatBox);
+
+                document.querySelector(".close-chat").addEventListener("click", () => {
+                    chatBox.remove();
+                });
+            }
+        }
+
+        // ===============================
+        // ICON CLICK ANIMATION
+        // ===============================
+
+        const icons = document.querySelectorAll(".icons span");
+
+        icons.forEach((icon) => {
+            icon.addEventListener("click", () => {
+                icon.style.transform = "scale(1.2)";
+
+                setTimeout(() => {
+                    icon.style.transform = "scale(1)";
+                }, 200);
+            });
+        });
+
+        // ===============================
+        // HERO IMAGE HOVER EFFECT
+        // ===============================
+
+        const cards = document.querySelectorAll(".hero .card");
+
+        cards.forEach((card) => {
+            card.addEventListener("mouseenter", () => {
+                card.style.transition = "0.3s";
+            });
+        });
+
+        // ===============================
+        // CATEGORY IMAGE HOVER EFFECT
+        // ===============================
+
+        const categories = document.querySelectorAll(".category");
+
+        categories.forEach((cat) => {
+            cat.addEventListener("mouseenter", () => {
+                cat.style.transform = "scale(1.1)";
+                cat.style.transition = "0.3s";
+            });
+
+            cat.addEventListener("mouseleave", () => {
+                cat.style.transform = "scale(1)";
+            });
+        });
+
+        // ===============================
+        // SMOOTH SCROLL
+        // ===============================
+
+        document.querySelectorAll("a[href^='#']").forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute("href"));
+
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                    });
+                }
+            });
+        });
+
+        // ===============================
+        // LAZY IMAGE LOADING
+        // ===============================
+
+        const images = document.querySelectorAll("img");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+
+                    img.style.opacity = "1";
+                    img.style.transition = "1s";
+
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        images.forEach((img) => {
+            img.style.opacity = "0";
+
+            observer.observe(img);
+        });
+
+        // ===============================
+        // SCROLL HEADER EFFECT
+        // ===============================
+
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector("header");
+
+            if (window.scrollY > 50) {
+                header.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+            } else {
+                header.style.boxShadow = "none";
+            }
+        });
+
+        function openChat() {
+            alert("Chat support coming soon!");
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
